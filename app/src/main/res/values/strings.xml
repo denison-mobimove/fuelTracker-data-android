@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FuelTracker Data </string>
+    <string name="info_street_name">Street Name</string>
+    <string name="info_town_name">Town</string>
+    <string name="info_phone_name">Phone Number</string>
+    <string name="title_activity_test">TestActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>

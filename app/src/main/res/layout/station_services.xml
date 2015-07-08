@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/main_activity_padd_top">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="SELECT SERVICES"
+        android:textSize="@dimen/txt_header_size" />
+
+    <RelativeLayout
+        android:id="@+id/brand_layout"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:id="@+id/open_layout"
+            android:layout_width="@dimen/gas_layout_size"
+            android:layout_height="@dimen/gas_layout_size"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/open_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fueltracker_filter_service_247_offstate_icon" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/car_wash_layout"
+            android:layout_width="@dimen/gas_layout_size"
+            android:layout_height="@dimen/gas_layout_size"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/carWash_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fueltracker_filter_service_carwash_offstate_icon" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/gas_layout"
+            android:layout_width="@dimen/gas_layout_size"
+            android:layout_height="@dimen/gas_layout_size"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/gas_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fueltracker_filter_service_gas_offstate_icon" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/shop_layout"
+            android:layout_width="@dimen/gas_layout_size"
+            android:layout_height="@dimen/gas_layout_size"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/shop_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fueltracker_filter_service_shop_offstate_icon" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/save_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/edtiText_spacing"
+        android:background="#00BCD4"
+        android:layout_alignParentBottom="true"
+        android:elevation="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="SAVE"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

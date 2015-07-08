@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gas_layout_size">90dp</dimen>
+    <dimen name="main_activity_padd_top">20dp</dimen>
+    <dimen name="edtiText_spacing">25dp</dimen>
+    <dimen name="txt_header_size">25sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>
