@@ -64,6 +64,7 @@ public class StationServiceActivity extends ActionBarActivity implements View.On
         ActionBar appBar = getSupportActionBar();
         appBar.setTitle("Services");
 
+
         MainActivity.gasStation.isOpened = false;
         MainActivity.gasStation.hasCarWash = false;
         MainActivity.gasStation.hasGas = false;
@@ -104,8 +105,8 @@ public class StationServiceActivity extends ActionBarActivity implements View.On
             setImageIcon();
         } else {
             gps_enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-
-            if (gps_enabled) {
+            Log.i("btn", "button clicked gps: "+gps_enabled);
+           // if (gps_enabled) {
                 Toast.makeText(this, "lat:" + myLocation.getLatitude() + "\nlng: " + myLocation.getLongitude(), Toast.LENGTH_SHORT).show();
 
                 MainActivity.gasStation.isOpened = open247;
@@ -115,19 +116,19 @@ public class StationServiceActivity extends ActionBarActivity implements View.On
                 MainActivity.gasStation.lattitude = myLocation.getLatitude();
                 MainActivity.gasStation.longitude = myLocation.getLongitude();
                 MainActivity.gasStation.date = new Date();
-                //saveButton.setBackgroundColor(Color.rgb(15,15,15));
+
                 Log.i("gas_station", MainActivity.gasStation.toString());
                 StationsFile.stationsToCSV(MainActivity.gasStation);
                 AlertDialog alert = new AlertDialog.Builder(this).setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     }
                 }).setMessage("Station Save successfully").setTitle("Success").show();
 
-            } else {
-                GPSDialog();
-            }
+           // } else {
+            //    GPSDialog();
+           // }
         }
 
     }
@@ -241,7 +242,7 @@ public class StationServiceActivity extends ActionBarActivity implements View.On
         } catch (Exception ex) {
         }
 
-        if (!gps_enabled && !network_enabled) {
+        if (!gps_enabled) {
             // notify user
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
             dialog.setMessage("GPS network not available");
@@ -278,6 +279,8 @@ public class StationServiceActivity extends ActionBarActivity implements View.On
         myLocation = locationManager.getLastKnownLocation(provider);
 
     }
+
+
 
 }
 /*end activity*/
